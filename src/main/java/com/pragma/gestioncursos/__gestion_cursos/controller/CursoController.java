@@ -1,6 +1,7 @@
 package com.pragma.gestioncursos.__gestion_cursos.controller;
 
 import com.pragma.gestioncursos.__gestion_cursos.entity.Curso;
+import com.pragma.gestioncursos.__gestion_cursos.reports.CursoExporterExcel;
 import com.pragma.gestioncursos.__gestion_cursos.reports.CursoExporterPDF;
 import com.pragma.gestioncursos.__gestion_cursos.repository.CursoRepository;
 import jakarta.servlet.http.HttpServletResponse;
@@ -100,5 +101,22 @@ public class CursoController {
         CursoExporterPDF exporterPDF = new CursoExporterPDF(cursos);
 
         exporterPDF.export(response);
+    }
+
+    @GetMapping("/export/excel")
+    public void generarReporteExcel(HttpServletResponse response) throws IOException {
+        response.setContentType("application/octet-stream");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        String currentDateTime = dateFormat.format(new Date());
+
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=cursos" + currentDateTime +".xlsx";
+        response.setHeader(headerKey, headerValue);
+
+        List<Curso> cursos = cursoRepository.findAll();
+
+        CursoExporterExcel exporterExcel = new CursoExporterExcel(cursos);
+
+        exporterExcel.export(response);
     }
 }
