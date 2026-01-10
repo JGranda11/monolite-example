@@ -3,7 +3,7 @@
 Aplicación web desarrollada con **Spring Boot** para la gestión de cursos, una sola tabla, para practicar vistas en Thymeleaf.
 Permite listar, crear y administrar cursos mediante una interfaz web usando Thymeleaf.
 
-## 🚀 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - Java
 - Spring Boot
@@ -17,4 +17,7 @@ Un encarpetado por capas simulando una MVC (sin capa de servicio) dado que se ti
 
 Tambien se practico un aspecto de reportes en PDF y Excel.
 
-<img width="1680" height="648" alt="image" src="https://github.com/user-attachments/assets/c0650919-0c94-4f20-833e-fc39671f0732" />
+Usando el motor de plantillas se logra una paginación y busqueda
+
+<<img width="1912" height="882" alt="image" src="https://github.com/user-attachments/assets/66a4afeb-fac7-4953-8a19-361b8c3a14a1" />
+
