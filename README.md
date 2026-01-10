@@ -19,5 +19,5 @@ Tambien se practico un aspecto de reportes en PDF y Excel.
 
 Usando el motor de plantillas se logra una paginación y busqueda
 
-<<img width="1912" height="882" alt="image" src="https://github.com/user-attachments/assets/66a4afeb-fac7-4953-8a19-361b8c3a14a1" />
+<img width="1912" height="882" alt="image" src="https://github.com/user-attachments/assets/66a4afeb-fac7-4953-8a19-361b8c3a14a1" />
 
